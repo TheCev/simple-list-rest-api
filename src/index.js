@@ -3,7 +3,9 @@
 const express = require('express'); //import express
 const bodyParser = require('body-parser')
 const app = express(); //start express
+const cors = require('cors')
 
+app.use(cors())
 
 //Settings
 app.set('port', process.env.PORT || 3000)//set port
