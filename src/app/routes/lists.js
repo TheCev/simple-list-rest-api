@@ -54,6 +54,7 @@ router.post('/:userId/lists', async (req,res) => {
 
 		if (!err) {//if, there isn't an error, send successfully message
 			console.log('have added a list to the user, which userId = ' + userId)
+			res.sendStatus(204)
 
 		} else { //else, show error
 			console.error(err)
