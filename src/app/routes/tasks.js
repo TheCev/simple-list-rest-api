@@ -59,6 +59,7 @@ router.post(route, async (req, res) => {
 
 		if (!err) {//if, there isn't an error, send succesfully message
 			console.log(`have been created a task, which userId = ${userId} and listId = ${listId}`)
+			res.sendStatus(204)
 		} else { //else, show the error
 			console.error(err)
 		}
@@ -76,6 +77,7 @@ router.put(`${route}/:taskId/title`, async (req, res) => {
 
 		if (!err) { //if there isn't an error, send succesfully message
 			console.log(`have been edit title of task, which taskId = ${taskId}, listId = ${listId} and userId = ${userId}`)
+			res.sendStatus(204)
 		} else { //else, show the error
 			console.error(err)
 		}
@@ -100,6 +102,7 @@ router.put(`${route}/:taskId/state`, async(req,res) => {
 
 					if (!err) { //if there isn't an error, send succesfully message
 						console.log(`have been marked as "done" a task, which taskId = ${taskId}, listId = ${listId} and userId = ${userId}`)
+						res.sendStatus(204)
 					} else { //else, show the error
 						console.error(err)
 					}
@@ -110,6 +113,7 @@ router.put(`${route}/:taskId/state`, async(req,res) => {
 
 					if (!err) { //if there isn't an error, send succesfully message
 						console.log(`have been marked as "do" a task, which taskId = ${taskId}, listId = ${listId} and userId = ${userId}`)
+						res.sendStatus(204)
 					} else { //else, show the error
 						console.error(err)
 					}
@@ -132,6 +136,7 @@ router.delete(`${route}/:taskId`, async(req,res) => {
 
 		if (!err) { //if there isn't an error, send succesfully message
 			console.log(`have been deleted the task, which taskId = ${taskId}, listId = ${listId} and userId = ${userId}`)
+			res.sendStatus(204)
 		} else { //else, show the error
 			console.error(err)
 		}
