@@ -72,6 +72,7 @@ router.delete('/:userId/lists/:listId', async (req, res) => {
 
 		if (!err) {//if, there isn't an error, send succesfully message
 			console.log('have deleted a list, which userId =' + userId + ' and listId =' + listId)
+			res.sendStatus(204)
 		} else {	//else, show the error
 			console.error(err)
 		}
@@ -89,6 +90,7 @@ router.put('/:userId/lists/:listId', async (req, res) => {
 
 		if (!err) {//if there isn't a error, send succesfully message
 			console.log(`have edited a list, which userId = ${userId} and listId = ${listId}`)
+			res.sendStatus(204)
 		} else {//else, show the error
 			console.error(err)
 		}
